@@ -6,8 +6,9 @@ class Square(pygame.sprite.Sprite):
     def __init__(self):
         super(Square, self).__init__() #access to sprite.spite?
         
+        self.surf = pygame.Surface((25, 25))
         #surface
-        self.surf = pygame.Surface((0, 25,255))
+        self.surf.fill((0, 200, 255))
         self.rect = self.surf.get_rect()
         
 #initialize
@@ -41,12 +42,9 @@ while gameOn:
     
     # where squares appear on the screen
     screen.blit(square1.surf, (40, 40))
-    screen.blit(square2.surf, (40, 40))
-    screen.blit(square3.surf, (40, 40))
-    screen.blit(square4.surf, (40, 40))
+    screen.blit(square2.surf, (40, 530))
+    screen.blit(square3.surf, (730, 40))
+    screen.blit(square4.surf, (730, 530))
     
     #update the display using flip
-    pygame.display.flip()
-    
-    
-            
+    pygame.display.flip()     
